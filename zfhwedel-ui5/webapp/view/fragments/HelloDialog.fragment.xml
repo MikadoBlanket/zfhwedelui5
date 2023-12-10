@@ -10,7 +10,15 @@
             <Text
                 id="helloDialogText"
                 text="{i18n>helloDialogText}"
+                class="sapUiResponsiveMargin"
             />
         </content>
+        <beginButton>
+            <Button
+                id="helloDialogCloseButton"
+                text="{i18n>dialogCloseButtonText}"
+                press=".onCloseDialog"
+            />
+        </beginButton>
     </Dialog>
 </core:FragmentDefinition>
