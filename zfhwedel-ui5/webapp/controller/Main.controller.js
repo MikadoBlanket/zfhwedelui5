@@ -31,6 +31,15 @@ sap.ui.define([
                  MessageToast.show(sMsg);
             },
 
+            onOpenDialog() {
+                // create dialog lazily
+                this.pDialog ??= this.loadFragment({
+                   name: "zfhwedel.zfhwedelui5.view.fragments.HelloDialog"
+                });
+       
+                this.pDialog.then((oDialog) => oDialog.open());
+             },
+
             showDetails: function(oEvent) {
                 // Get selected element
                 const oItem = oEvent.getSource()
