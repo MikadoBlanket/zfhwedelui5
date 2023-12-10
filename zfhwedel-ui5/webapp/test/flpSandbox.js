@@ -39,7 +39,7 @@ sap.ui.define([
 							"tiles": [{
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
-									"title": "UI5 Demo Project",
+									"title": "UI5 Demo App",
 									"targetURL": "#zfhwedelzfhwedelui5-display"
 								}
 							}]
@@ -55,7 +55,7 @@ sap.ui.define([
 								"semanticObject": "zfhwedelzfhwedelui5",
 								"action": "display",
 								"description": "A Fiori application.",
-								"title": "UI5 Demo Project",
+								"title": "UI5 Demo App",
 								"signature": {
 									"parameters": {}
 								},

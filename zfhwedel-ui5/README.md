@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Sun Dec 10 2023 16:05:47 GMT+0100 (Central European Standard Time)|
+|**Generation Date and Time**<br>Sun Dec 10 2023 16:21:36 GMT+0100 (Central European Standard Time)|
 |**App Generator**<br>@sap/generator-fiori-freestyle|
 |**App Generator Version**<br>1.11.5|
 |**Generation Platform**<br>Visual Studio Code|
@@ -9,7 +9,7 @@
 |**Service Type**<br>None|
 |**Service URL**<br>N/A
 |**Module Name**<br>zfhwedel-ui5|
-|**Application Title**<br>UI5 Demo Project|
+|**Application Title**<br>UI5 Demo App|
 |**Namespace**<br>zfhwedel|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.120.1|

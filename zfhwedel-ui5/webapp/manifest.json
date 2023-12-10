@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.11.5",
-      "toolsId": "24c099f9-9869-47c8-ba50-853d7e94ffaf"
+      "toolsId": "8962d908-0938-452e-9e27-74dd2312edd3"
     }
   },
   "sap.ui": {
