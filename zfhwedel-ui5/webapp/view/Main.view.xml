@@ -2,6 +2,8 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content >
+            <Button id="helloWorldButton" text="Say hi" press=".onShowHello"></Button>
+        </content>
     </Page>
 </mvc:View>
