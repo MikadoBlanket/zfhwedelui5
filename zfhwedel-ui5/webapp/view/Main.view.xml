@@ -11,6 +11,36 @@
                 valueLiveUpdate="true"
                 width="60%"
             />
+            <Panel
+                id="salesDocsPanel"
+                headerText="{i18n>salesDocsTitle}"
+                class="sapUiResponsiveMargin"
+                width="auto"
+            >
+                <List
+                    id="salesDocsList"
+                    headerText="{i18n>salesDocsListTitle}"
+                    items="{salesDocs>/SalesDoc}"
+                    growing="true"
+                >
+                    <items>
+                        <ObjectListItem
+                            id="listItem"
+                            title="{salesDocs>SalesDoc}. {salesDocs>SalesDocType}"
+                            number="{
+                                parts: [
+                                    'salesDocs>SalesDocNetValue',
+                                    'salesDocs>SalesDocNetValueCurrency'
+                                ],
+                                type: 'sap.ui.model.type.Currency',
+                                formatOptions: {
+                                    showMeasure: false
+                                }
+                            }"
+                            numberUnit="{salesDocs>SalesDocNetValueCurrency}"/>
+                    </items>
+                </List>
+            </Panel>
         </content>
     </Page>
 </mvc:View>

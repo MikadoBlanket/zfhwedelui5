@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="cds_zp_df_sales51" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="SalesDocType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SalesDoc"/>
+                </Key>
+                <Property Name="SalesDoc" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Sales Document"/>
+                <Property Name="SalesDocCreationDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Created On" sap:quickinfo="Record Created On"/>
+                <Property Name="SalesDocCreationTime" Type="Edm.Time" Precision="0" sap:label="Time" sap:quickinfo="Entry time"/>
+                <Property Name="SalesDocCreatedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Created By" sap:quickinfo="Name of Person Responsible for Creating the Object"/>
+                <Property Name="SalesDocType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Sales Document Type"/>
+                <Property Name="SalesDocSalesOrg" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Sales Organization"/>
+                <Property Name="SalesDocDistrChannel" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:text="SalesDocDivision" sap:label="Distribution Channel"/>
+                <Property Name="SalesDocDivision" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Division"/>
+                <Property Name="SalesDocSalesGroup" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Sales Group"/>
+                <Property Name="SalesDocSalesOffice" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Sales Office"/>
+                <Property Name="SalesDocNetValue" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="SalesDocNetValueCurrency" sap:label="Net Value" sap:quickinfo="Net Value of the Sales Order in Document Currency"/>
+                <Property Name="SalesDocNetValueCurrency" Type="Edm.String" MaxLength="5" sap:label="Document Currency" sap:quickinfo="SD document currency" sap:semantics="currency-code"/>
+                <Property Name="SalesDocNetValueCriticality" Type="Edm.Byte"/>
+                <Property Name="SalesDocURL" Type="Edm.String" MaxLength="13"/>
+                <NavigationProperty Name="to_items" Relationship="cds_zp_df_sales51.assoc_861153EE9216D594C481DA5CF3F46EEB" FromRole="FromRole_assoc_861153EE9216D594C481DA5CF3F46EEB" ToRole="ToRole_assoc_861153EE9216D594C481DA5CF3F46EEB"/>
+            </EntityType>
+            <EntityType Name="SalesDocItemType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SalesDoc"/>
+                    <PropertyRef Name="SalesDocItem"/>
+                </Key>
+                <Property Name="SalesDoc" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Sales Document"/>
+                <Property Name="SalesDocItem" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="NonNegative" sap:label="Sales Document Item"/>
+                <Property Name="SalesDocItemMaterial" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number"/>
+                <Property Name="SalesDocItemMaterialText" Type="Edm.String" MaxLength="40" sap:label="Item Description" sap:quickinfo="Short text for sales order item"/>
+                <Property Name="SalesDocItemNetValue" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Net Value" sap:quickinfo="Net Value of the Order Item in Document Currency"/>
+                <Property Name="SalesDocItemNetValueCurrency" Type="Edm.String" MaxLength="5" sap:label="Document Currency" sap:quickinfo="SD document currency" sap:semantics="currency-code"/>
+                <Property Name="SalesDocItemOrderQuantity" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Order Quantity" sap:quickinfo="Cumulative order quantity in sales units"/>
+                <Property Name="SalesDocItemOrderQuantityUnit" Type="Edm.String" MaxLength="3" sap:label="Sales Unit" sap:semantics="unit-of-measure"/>
+                <Property Name="SalesDocItemOrderGrossWeight" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Gross Weight" sap:quickinfo="Gross Weight of the Item"/>
+                <Property Name="SalesDocItemOrderNetWeight" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Net Weight" sap:quickinfo="Net Weight of the Item"/>
+                <Property Name="SalesDocItemOrderWeightUnit" Type="Edm.String" MaxLength="3" sap:label="Unit of Weight" sap:semantics="unit-of-measure"/>
+            </EntityType>
+            <Association Name="assoc_861153EE9216D594C481DA5CF3F46EEB" sap:content-version="1">
+                <End Type="cds_zp_df_sales51.SalesDocType" Multiplicity="1" Role="FromRole_assoc_861153EE9216D594C481DA5CF3F46EEB"/>
+                <End Type="cds_zp_df_sales51.SalesDocItemType" Multiplicity="*" Role="ToRole_assoc_861153EE9216D594C481DA5CF3F46EEB"/>
+            </Association>
+            <EntityContainer Name="cds_zp_df_sales51_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="SalesDoc" EntityType="cds_zp_df_sales51.SalesDocType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="SalesDocItem" EntityType="cds_zp_df_sales51.SalesDocItemType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <AssociationSet Name="assoc_861153EE9216D594C481DA5CF3F46EEB" Association="cds_zp_df_sales51.assoc_861153EE9216D594C481DA5CF3F46EEB" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalesDoc" Role="FromRole_assoc_861153EE9216D594C481DA5CF3F46EEB"/>
+                    <End EntitySet="SalesDocItem" Role="ToRole_assoc_861153EE9216D594C481DA5CF3F46EEB"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotations Target="cds_zp_df_sales51.cds_zp_df_sales51_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="Aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="None"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/sap/zdf_sales_srv/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://A17Z.UCC.OVGU.DE:443/sap/opu/odata/sap/zdf_sales_srv/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
