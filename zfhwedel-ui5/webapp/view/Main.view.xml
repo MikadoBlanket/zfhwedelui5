@@ -3,7 +3,7 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content >
-            <Button id="helloWorldButton" text="Say hi" press=".onShowHello"></Button>
+            <Button id="helloWorldButton" text="{i18n>showHelloButtonText}" press=".onShowHello"></Button>
             <Input
                 id="helloWorldInput"
                 value="{/recipient/name}"
