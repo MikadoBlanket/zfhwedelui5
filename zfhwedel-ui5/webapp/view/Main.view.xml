@@ -37,7 +37,10 @@
                                     showMeasure: false
                                 }
                             }"
-                            numberUnit="{salesDocs>SalesDocNetValueCurrency}"/>
+                            numberUnit="{salesDocs>SalesDocNetValueCurrency}"
+                            type="Navigation"
+                            press=".showDetails"
+                            />
                     </items>
                 </List>
             </Panel>
