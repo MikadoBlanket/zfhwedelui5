@@ -118,7 +118,7 @@
                 },
                 {
                     "name": "SalesDocDetail",
-                    "pattern": "detail",
+                    "pattern": "detail/{salesDocPath}",
                     "target": "SalesDocDetail"
                 }
             ],

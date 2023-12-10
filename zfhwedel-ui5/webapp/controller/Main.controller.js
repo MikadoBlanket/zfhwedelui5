@@ -31,11 +31,15 @@ sap.ui.define([
                  MessageToast.show(sMsg);
             },
 
-            showDetails: function() {
-              // Get Router from Component.js
-              const oRouter = this.getOwnerComponent().getRouter();
-              // Nav to detail page (Use name of route)
-              oRouter.navTo("SalesDocDetail");
+            showDetails: function(oEvent) {
+                // Get selected element
+                const oItem = oEvent.getSource()
+                // Get Router from Component.js
+                const oRouter = this.getOwnerComponent().getRouter();
+                // Nav to detail page (Use name of route)
+                   oRouter.navTo("SalesDocDetail", {
+                   salesDocPath: window.encodeURIComponent(oItem.getBindingContext("salesDocs").getPath().substr(1))
+                });
             }
         });
     });
