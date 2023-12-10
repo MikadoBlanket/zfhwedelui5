@@ -6,6 +6,8 @@
     <Page
         id="salesDocDetailPage"
         title="{i18n>detailPageTitle}"
+        showNavButton="true"
+        navButtonPress=".onNavBack"
     >
         <ObjectHeader
             intro="{salesDocs>SalesDoc}"
